@@ -1,0 +1,5 @@
+[0110/125008.665:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
+[0110/172117.711:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
+[0110/172117.711:ERROR:exception_snapshot_win.cc(99)] thread ID 10624 not found in process
+[0110/172117.711:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
+[0110/172117.711:ERROR:exception_snapshot_win.cc(99)] thread ID 2148 not found in process
