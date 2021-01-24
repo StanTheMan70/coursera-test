@@ -11,6 +11,9 @@
 function FoundItems(){
   var ddo = {
 templateUrl: 'foundItem.html'
+// scope: {
+//   menu: '=foundItems'
+// }
   };
   return ddo;
 }
@@ -18,16 +21,38 @@ templateUrl: 'foundItem.html'
   NarrowItDownController.$inject = ['MenuSearchService'];
   function NarrowItDownController(MenuSearchService){
     var menu = this;
-    menu.getMenu = function(){
+
+menu.itemName = "";
+
+menu.removeItem = function(itemIndex){
+  menu.items.splice(itemIndex, 1);
+};
+
+  menu.getMenu = function(){
+    if (menu.items) {menu.items.length = 0;}
+menu.status = false;
+if(menu.itemName.trim()!="") {
     var promise = MenuSearchService.getMatchedMenuItems(menu.itemName);
     promise.then(function(responce){
   //    console.log("found this: " + responce.name[0] + "; " + responce.short_name[0] + "; " + responce.description[0]);
-
+  menu.items = responce;
+  menu.message = "";
+  if(menu.items.length>0){
+    menu.status = true;
+  }else{
+  menu.message = "Nothing found";
+  };
+  //console.log(menu.items);
 
     })
     .catch(function(error){
     console.log(error);
     })
+}else{
+
+  menu.message = "Nothing found";
+  //console.log(menu.message);
+}
   };
     };
 

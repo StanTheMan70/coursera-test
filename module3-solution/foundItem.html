@@ -1,6 +1,16 @@
-<ul>
-<li ng-repeat="item in menu.items">
-  {{menu.items.name}}{{menu.items.short_name}}{{menu.items.description}}
-  <button>Remove Item</<button>
-    </li>
-    </ul>
+<table>
+  <thead>
+    <tr>
+      <th>NAME</th>
+      <th>SHORT_NAME</th>
+      <th>DESCRIPTION</th>
+      <th></th>
+    </tr>
+  </thead>
+<tr ng-repeat="item in menu.items">
+<td class="left">{{item.name}}</td>
+<td>{{item.short_name}}</td>
+<td class="left">{{item.description}}</td>
+  <td class="anker"><button class="button18" ng-click="menu.removeItem($index);">Don't want this one!</<button></td>
+    </tr>
+    </table>
