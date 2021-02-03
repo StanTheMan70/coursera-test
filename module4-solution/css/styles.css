@@ -1,0 +1,47 @@
+body {
+  font-size: 1.2em;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
+.loading-icon {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid grey;
+}
+
+td{
+  border: 1px solid grey;
+  padding: 2px;
+  text-align: center;
+}
+
+tr[ui-sref]:hover {
+  cursor: pointer;
+  color: white;
+  background:maroon;
+
+}
+th{
+  text-align: center;
+  border: 2px solid grey;
+}
+
+h1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.centre{
+  margin: 0px auto;
+  width: 500px;
+}
